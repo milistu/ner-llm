@@ -38,6 +38,7 @@ def process_entities(dataset):
                     entity_spans.extend(matches)
 
         except Exception as e:
+            print(f"Error {e} processing entry.")
             continue
 
         all_data.append({"tokenized_text": tokenized_text, "ner": entity_spans})
